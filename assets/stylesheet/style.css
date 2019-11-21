@@ -1,7 +1,13 @@
 body{
   margin: 0px;
   background-color: #132549;
+  font-family: 'Roboto', sans-serif;
   text-align: center;
+}
+
+img{
+  width:150px;
+  height: 150px;
 }
 
 h1{
@@ -31,5 +37,9 @@ table td {
 }
 
 .players h1{
-  padding: 15px;    
+  padding: 25px;    
+}
+
+#player1ico, #player2ico{
+    padding: 0px 20px;
 }
