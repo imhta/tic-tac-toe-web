@@ -9,11 +9,25 @@
     <title>Tic Tac Toe Web 🎮</title>
   </head>
   <body>
-    <img src="assets/images/tic tac toe logo@2x.png">
-    <h1>Tic Tac Toe Web 🎮</h1>
-    <div class="players">
-      <h1><span id="player1ico">(x)</span>Player 1</h1>
-      <h1>Player 2 <span id="player1ico">(o)</span></h1>
+    <div class="nav">
+      <!-- <h1 id="player1"><span id="player1-score">0</span><br><span id="player1-ico">x</span>Player 1</h1>
+      <img src="assets/images/tic tac toe logo@2x.png">
+      <h1 id="player2"><span id="player-score">0</span><br><div id="pl2-displ">Player 2 <span id="player2-ico">O</span></h1></div></h1> -->
+      <div id="player1">
+        <div class="score"><h1>Score:</h1><h1>0</h1></div>
+        <div class="pl-name">
+          <h1>Player 1</h1>
+          <h1 class="symbol">X</h1>
+        </div>
+      </div>
+      <img src="assets/images/tic tac toe logo@2x.png">
+      <div id="player2">
+          <div class="score"><h1>Score: </h1><h1>0</h1></div>
+          <div class="pl-name">
+            <h1 class="symbol">0</h1>
+            <h1>Player 2</h1>
+          </div>
+        </div>
     </div>
     <table>
       <tbody>

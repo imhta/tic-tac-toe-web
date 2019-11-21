@@ -29,17 +29,54 @@ table td {
   padding: 1.5rem 3rem;
 }
 
-.players{
+.nav{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-end;
+}
+
+/* #player1-ico, #player2-ico{
+  display: flex;
+  background-color: green;
+  padding: 10px 10px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+}
+
+#pl2-displ{
+    display: inline;
+
+} */
+
+#player1, #player2{
+  display: flex;
+  flex-direction: column;
+}
+
+.score{
+    display: flex;
+    flex-direction: row;
+}
+
+.score h1{
+    padding: 0px 10px;
+}
+
+.pl-name{
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  align-items: center;
 }
 
-.players h1{
-  padding: 25px;    
+.pl-name h1{
+  padding: 0px 10px;
+  background-color: green; 
+  border-radius: 10px; 
 }
 
-#player1ico, #player2ico{
-    padding: 0px 20px;
+.symbol{
+    background-color: aqua !important;
+    border-radius: 50% !important;
 }
