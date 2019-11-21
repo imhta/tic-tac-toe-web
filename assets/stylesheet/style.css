@@ -1,0 +1,24 @@
+body{
+  margin: 0px;
+  background-color: #132549;
+  text-align: center;
+}
+
+h1{
+    color: white;
+}
+
+table{
+  background-color: #132549;
+  width: 350px;
+  height: 350px;
+  margin: auto;
+  border-collapse: collapse;
+  border-style: hidden;
+  border-spacing: 0px;
+} 
+
+table td {
+  border: 3px solid#06DD28;
+  padding: 1.5rem 3rem;
+}
