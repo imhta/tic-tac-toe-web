@@ -61,12 +61,12 @@ nav {
   font-family: "Courier New", Courier, monospace;
 }
 
-#board-wrapper {
+#board-wrapper, #home-wrapper {
   width: fit-content;
   margin: 10px auto;
   box-shadow: 0px 0px 5px black;
 }
-#board {
+#board, #player-name-form {
   background-color: #132549;
   width: 350px;
   height: 350px;
@@ -88,5 +88,38 @@ nav {
 
 #menu {
   padding: 25px 0px;
+  cursor: pointer;
+}
+#home-wrapper{
+  padding: 20px;
+  background-color: #0e1c36;
+}
+#player-name-form{
+  display: flex;
+  flex-direction: column;
+  color: white;
+  height: max-content;
+  background-color: #0e1c36;
+  justify-content: end;
+}
+#player-name-form a{
+  color: #06DD28;
+}
+#player-name-form input{
+  display: block;
+  margin: 20px;
+  padding: 15px 30px;
+  font-size: larger;
+  color: white;
+  background-color: #132549;
+  border: none;
+  border-bottom: 2px solid #06DD28;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+#player-name-form  #start-btn{
+  border: none;
+  background-color: #06DD28;
   cursor: pointer;
 }
