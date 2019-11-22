@@ -1,4 +1,7 @@
-import route from "./route.js";
+import route from './route.js';
+import state from './state.js';
+
+state.init();
 
 const menuBtn = document.getElementById('menu');
 const startBtn = document.getElementById('start-btn');
@@ -15,3 +18,4 @@ startBtn.addEventListener('click', (e) => {
     route.from(homeWrapperElement).to(boardWrapperElement);
     e.preventDefault();
 });
+
