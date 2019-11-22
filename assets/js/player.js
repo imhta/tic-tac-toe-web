@@ -25,7 +25,6 @@ const Player  = (() => {
             state.set('player', player1);
             state.set('player1', player1);
             state.set('player2', player2);
-            
         }
     };
 })();
