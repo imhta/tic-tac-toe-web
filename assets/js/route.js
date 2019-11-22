@@ -1,11 +1,12 @@
 const route = {
     from (fromElement) {
       fromElement.style.display = 'none';
-      return route;
+      return {
+        to (toElement) {
+            toElement.style.display = 'block';
+          }
+      };
     },
-    to (toElement) {
-      toElement.style.display = 'block';
-    }
 };
 
 export default route;
