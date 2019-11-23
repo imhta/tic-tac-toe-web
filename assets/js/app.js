@@ -1,13 +1,17 @@
 import route from './route.js';
 import state from './state.js';
+import Game from './game.js';
+import Board from './board.js';
 
 state.init();
+Game.init();
 
 const menuBtn = document.getElementById('menu');
 const startBtn = document.getElementById('start-btn');
+const restBtn = document.getElementById('reset-btn');
 const boardWrapperElement = document.getElementById('board-wrapper');
 const homeWrapperElement = document.getElementById('home-wrapper');
-
+const boardElement = document.getElementById('board');
 
 
 menuBtn.addEventListener('click', (e) => {
@@ -19,3 +23,12 @@ startBtn.addEventListener('click', (e) => {
     e.preventDefault();
 });
 
+boardElement.addEventListener('click', (e) => {
+    Board.set(e.target);
+    e.preventDefault();
+});
+
+restBtn.addEventListener('click', (e) => {
+    Board.reset();
+    e.preventDefault();
+});
