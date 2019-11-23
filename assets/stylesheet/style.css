@@ -70,6 +70,7 @@ nav {
 #board,
 #player-name-form {
   background-color: #132549;
+  color: white;
   width: 350px;
   height: 350px;
   margin: 15px;
