@@ -2,7 +2,7 @@ import state from './state.js';
 import UI from './ui.js';
 import Player from './player.js';
 
-const Board = (function () {
+const Board = (() => {
   return {
     init() {
       const { board } = state.current;

@@ -3,7 +3,7 @@ import state from './state.js';
 const player1Field = document.getElementById('player1-name-input');
 const player2Field = document.getElementById('player2-name-input');
 
-const UI = (function () {
+const UI = (() => {
   return {
     init() {
       this.updatebyId('player1-name', state.current.player1.name);

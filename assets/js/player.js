@@ -1,6 +1,6 @@
 import state from './state.js';
 
-const Player = (function () {
+const Player = (() => {
   return {
     init() {
       const { player } = state.current;

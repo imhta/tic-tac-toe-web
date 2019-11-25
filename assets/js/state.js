@@ -1,4 +1,4 @@
-const state = (function () {
+const state = (() => {
   return {
     current: { keys: [] },
     init() {
