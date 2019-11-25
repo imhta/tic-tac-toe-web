@@ -19,7 +19,7 @@ Tic-tac-toe (American English), noughts and crosses (British English), or Xs and
   cd tic-tac-toe-web
 ```
 
-2. Then :add: add your contribution
+2. Then :heavy_plus_sign: add your contribution
 3. And Feel free to make a PR
 
 ## Contributors
