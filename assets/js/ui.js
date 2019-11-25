@@ -1,4 +1,4 @@
-import state from "./state.js";
+import state from './state.js';
 const player1Field = document.getElementById('player1-name-input');
 const player2Field = document.getElementById('player2-name-input');
 const UI = (() => {
@@ -15,15 +15,17 @@ const UI = (() => {
       player2Field.value = state.current.player2.name;
     },
     updateStatus() {
-      this.updatebyId('current-status',`${state.current.player.name} place your ${state.current.player.role}` )
+      this.updatebyId(
+        'current-status',
+        `${state.current.player.name} place your ${state.current.player.role}`
+      );
     },
-    updateCell(row, col){
-      this.updatebyId(`${row}-${col}`, state.current.board[row-1][col-1])
+    updateCell(row, col) {
+      this.updatebyId(`${row}-${col}`, state.current.board[row - 1][col - 1]);
     },
     updatebyId(id, innerHtml) {
       document.getElementById(id).innerHTML = innerHtml;
-    },
-
+    }
   };
 })();
 

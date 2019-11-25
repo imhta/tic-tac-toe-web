@@ -15,9 +15,8 @@ const Player = (() => {
       const currentPlayer = state.current.player;
       const player1Name = state.current.player1.name;
       const player2Name = state.current.player2.name;
-      currentPlayer.name = currentPlayer.name === player1Name 
-                                                ? player2Name 
-                                                : player1Name;
+      currentPlayer.name =
+        currentPlayer.name === player1Name ? player2Name : player1Name;
       currentPlayer.role = currentPlayer.role === 'X' ? 'O' : 'X';
       state.set('player', currentPlayer);
     },
