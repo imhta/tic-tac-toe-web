@@ -80,7 +80,8 @@ nav {
 
 #board td {
   border: 3px solid#06DD28;
-  padding: 1.5rem 3rem;
+  width: 100px;
+  height: 100px;
 }
 
 .menu-wrapper {
