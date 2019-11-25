@@ -84,6 +84,7 @@ nav {
   height: 100px;
   font-size: 48px;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .menu-wrapper {
