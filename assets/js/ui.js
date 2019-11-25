@@ -17,7 +17,7 @@ const UI = (() => {
     updateStatus() {
       this.updatebyId(
         'current-status',
-        `${state.current.player.name} place your ${state.current.player.role}`
+        `${state.current.player.name} place your ${state.current.player.role}`,
       );
     },
     updateCell(row, col) {
@@ -25,7 +25,7 @@ const UI = (() => {
     },
     updatebyId(id, innerHtml) {
       document.getElementById(id).innerHTML = innerHtml;
-    }
+    },
   };
 })();
 

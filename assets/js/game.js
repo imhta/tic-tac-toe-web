@@ -16,7 +16,7 @@ const Game = (() => {
     },
     anyoneWon() {
       return false;
-    }
+    },
   };
 })();
 

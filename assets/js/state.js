@@ -3,7 +3,7 @@ const state = (() => {
     current: { keys: [] },
     init() {
       if (localStorage.length) {
-        this.getAllKeys().forEach(key => {
+        this.getAllKeys().forEach((key) => {
           this.current[key] = this.get(key);
         });
       }
@@ -20,12 +20,12 @@ const state = (() => {
       return JSON.parse(localStorage.getItem(key));
     },
     getAllKeys() {
-      this.current['keys'] = this.get('keys');
-      return this.current['keys'];
+      this.current.keys = this.get('keys');
+      return this.current.keys;
     },
     reset() {
       localStorage.clear();
-    }
+    },
   };
 })();
 

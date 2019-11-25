@@ -5,16 +5,16 @@ import Player from './player.js';
 const Board = (() => {
   return {
     init() {
-      const board = state.current.board;
+      const {board} = state.current;
       if (!board) {
         state.set('board', [
           ['', '', ''],
           ['', '', ''],
-          ['', '', '']
+          ['', '', ''],
         ]);
       } else {
         let rowIndex = 1;
-        board.forEach(row => {
+        board.forEach((row) => {
           let colIndex = 1;
           row.forEach(() => {
             UI.updateCell(rowIndex, colIndex);
@@ -26,7 +26,7 @@ const Board = (() => {
     },
 
     set(element) {
-      const [row, col] = element.id.split('-').map(value => Number(value));
+      const [row, col] = element.id.split('-').map((value) => Number(value));
       if (this.isFree(row - 1, col - 1)) {
         state.current.board[row - 1][col - 1] = state.current.player.role;
         state.set('board', state.current.board);
@@ -43,7 +43,7 @@ const Board = (() => {
       state.set('board', [
         ['', '', ''],
         ['', '', ''],
-        ['', '', '']
+        ['', '', ''],
       ]);
       this.init();
       Player.changeRole();
