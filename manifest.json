@@ -1,0 +1,16 @@
+{
+    "name": "Tic Tac Toe Web",
+    "short_name": "Tic-Tac-Toe",
+    "icons": [
+      {
+        "src": "assets/images/tic tac toe logo@2x.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ],
+    "start_url": "/index.html",
+    "gcm_sender_id": "103953800507",
+    "display": "standalone",
+    "background_color": "#0e1c36",
+    "theme_color": "#0e1c36"
+  }

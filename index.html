@@ -9,6 +9,7 @@
       href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
       rel="stylesheet"
     />
+    <link rel="manifest" href="manifest.json">
     <title>Tic Tac Toe Web 🎮</title>
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
@@ -88,5 +89,13 @@
       </form>
     </section>
     <script type="module" src="./assets/js/app.js"></script>
+    <script>
+        if('serviceWorker' in navigator) {
+          navigator.serviceWorker.register('/sw.js')
+            .then(function() {
+                  console.log('Service Worker Registered');
+            });
+        }
+    </script>
   </body>
 </html>
