@@ -95,11 +95,14 @@ nav {
 
 #menu-btn, #reset-btn{
   display: flex;
+  justify-content: center;
   align-items: center;
   padding: 25px 0px;
+  flex: 1;
 }
 
 #reset-btn:hover, #menu-btn:hover{
+  padding-bottom: 23px;
   border-bottom: 2px solid #06dd28 ;
 }
 #home-wrapper {
