@@ -6,7 +6,7 @@ import Board from './board.js';
 state.init();
 Game.init();
 
-const menuBtn = document.getElementById('menu');
+const menuBtn = document.getElementById('menu-btn');
 const startBtn = document.getElementById('start-btn');
 const restBtn = document.getElementById('reset-btn');
 const boardWrapperElement = document.getElementById('board-wrapper');

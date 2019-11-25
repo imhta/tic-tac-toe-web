@@ -84,14 +84,23 @@ nav {
 }
 
 .menu-wrapper {
+  display: flex;
   background-color: #0e1c36;
   color: white;
   text-align: center;
+  justify-content: space-around;
+  align-items: center;
+  cursor: pointer;
 }
 
-#menu {
+#menu-btn, #reset-btn{
+  display: flex;
+  align-items: center;
   padding: 25px 0px;
-  cursor: pointer;
+}
+
+#reset-btn:hover, #menu-btn:hover{
+  border-bottom: 2px solid #06dd28 ;
 }
 #home-wrapper {
   display: none;
