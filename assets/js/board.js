@@ -2,10 +2,10 @@ import state from './state.js';
 import UI from './ui.js';
 import Player from './player.js';
 
-const Board = (() => {
+const Board = (function () {
   return {
     init() {
-      const {board} = state.current;
+      const { board } = state.current;
       if (!board) {
         state.set('board', [
           ['', '', ''],
@@ -26,6 +26,7 @@ const Board = (() => {
     },
 
     set(element) {
+      // eslint-disable-next-line arrow-parens
       const [row, col] = element.id.split('-').map((value) => Number(value));
       if (this.isFree(row - 1, col - 1)) {
         state.current.board[row - 1][col - 1] = state.current.player.role;
@@ -48,7 +49,7 @@ const Board = (() => {
       this.init();
       Player.changeRole();
       UI.updateStatus();
-    }
+    },
   };
 })();
 

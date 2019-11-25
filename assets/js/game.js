@@ -2,7 +2,7 @@ import Player from './player.js';
 import Board from './board.js';
 import UI from './ui.js';
 
-const Game = (() => {
+const Game = (function () {
   return {
     init() {
       Board.init();
