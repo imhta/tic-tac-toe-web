@@ -9,6 +9,11 @@ const Game = (() => {
             Player.init();
             UI.init();
         },
+        updateInfo(newPlayers) {
+            Player.setPlayerInfo(newPlayers);
+            UI.init();
+            Board.reset();
+        },
         anyoneWon() {
             return false;
         },

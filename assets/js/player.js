@@ -30,6 +30,15 @@ const Player = (() => {
       state.set('player', player1);
       state.set('player1', player1);
       state.set('player2', player2);
+    },
+    setPlayerInfo([player1Name, player2Name]) {
+      const player1 = state.current.player1;
+      const player2 = state.current.player2;
+      player1.name = player1Name;
+      player2.name = player2Name;
+      state.set('player', player1);
+      state.set('player1', player1);
+      state.set('player2', player2);
     }
   };
 })();
