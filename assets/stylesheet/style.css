@@ -62,7 +62,7 @@ nav {
   font-family: "Courier New", Courier, monospace;
 }
 
-#board-wrapper{
+#board-wrapper {
   display: block;
   width: fit-content;
   margin: 10px auto;
@@ -100,7 +100,8 @@ nav {
   user-select: none;
 }
 
-#menu-btn, #reset-btn{
+#menu-btn,
+#reset-btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -108,9 +109,10 @@ nav {
   flex: 1;
 }
 
-#reset-btn:hover, #menu-btn:hover{
+#reset-btn:hover,
+#menu-btn:hover {
   padding-bottom: 23px;
-  border-bottom: 2px solid #06dd28 ;
+  border-bottom: 2px solid #06dd28;
 }
 #home-wrapper {
   display: none;
