@@ -1,8 +1,22 @@
 import Player from './player.js';
 import Board from './board.js';
 import UI from './ui.js';
+import state from './state.js';
 
 const Game = (() => {
+  const checkVertical = () => {
+
+  };
+
+  const checkHorizontal = (board) => {
+    board.forEach((row) => {
+      let rowSet = new Set(row);
+      return rowSet.size === 1;
+    });
+  };
+  
+  const checkDiagonal = () => {};
+
   return {
     init() {
       Board.init();
@@ -14,7 +28,9 @@ const Game = (() => {
       UI.init();
       Board.reset();
     },
-    anyoneWon() {
+    isWinner() {
+      const {board} = state.current;
+
       return false;
     },
   };
