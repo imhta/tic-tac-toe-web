@@ -17,7 +17,7 @@ const UI = (() => {
       player2Field.value = state.current.player2.name;
     },
     updateStatus(
-      status = `${state.current.player.name} place your ${state.current.player.role}`
+      status = `${state.current.player.name} place your ${state.current.player.role}`,
     ) {
       this.updatebyId('current-status', status);
     },
@@ -32,13 +32,13 @@ const UI = (() => {
         [
           // keyframes
           { transform: 'rotateY(0deg)' },
-          { transform: 'rotateY(180deg)' }
+          { transform: 'rotateY(180deg)' },
         ],
         {
           // timing options
           duration: 1000,
-          iterations: 1
-        }
+          iterations: 1,
+        },
       );
     },
     flipBoardOut(element) {
@@ -46,15 +46,15 @@ const UI = (() => {
         [
           // keyframes
           { transform: 'rotateY(0deg)' },
-          { transform: 'rotateY(-180deg)' }
+          { transform: 'rotateY(-180deg)' },
         ],
         {
           // timing options
           duration: 1000,
-          iterations: 1
-        }
+          iterations: 1,
+        },
       );
-    }
+    },
   };
 })();
 

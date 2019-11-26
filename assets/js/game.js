@@ -5,9 +5,9 @@ import state from './state.js';
 
 const Game = (() => {
   const checkVertical = (board) => {
-    for (let i = 0; i < board.length; i++) {
-      const currentVertical = (board[0][i] === board[1][i] 
-      && board[1][i] === board[2][i]);
+    for (let i = 0; i < board.length; i += 1) {
+      const currentVertical = (board[0][i] === board[1][i]
+        && board[1][i] === board[2][i]);
       if (currentVertical) return true;
     }
     return false;
@@ -24,8 +24,8 @@ const Game = (() => {
   };
 
   const checkDiagonal = (board) => {
-    let d1 = board[0][0] === board[1][1] && board[1][1] === board[2][2];
-    let d2 = board[0][2] === board[1][1] && board[1][1] === board[2][0];
+    const d1 = board[0][0] === board[1][1] && board[1][1] === board[2][2];
+    const d2 = board[0][2] === board[1][1] && board[1][1] === board[2][0];
     return d1 || d2;
   };
 
@@ -43,10 +43,10 @@ const Game = (() => {
     isWinner() {
       const { board } = state.current;
       if (
-        checkVertical(board) ||
-        checkHorizontal(board) ||
-        checkDiagonal(board)
-      ){
+        checkVertical(board)
+        || checkHorizontal(board)
+        || checkDiagonal(board)
+      ) {
         return true;
       }
       return false;

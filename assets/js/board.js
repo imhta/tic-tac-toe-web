@@ -34,10 +34,10 @@ const Board = (() => {
       if (this.isFree(row - 1, col - 1)) {
         state.current.board[row - 1][col - 1] = state.current.player.role;
         state.set('board', state.current.board);
-        state.set('remainingMoves', state.current.remainingMoves -= 1)
+        state.set('remainingMoves', state.current.remainingMoves -= 1);
         UI.updateCell(row, col);
-        if (state.current.remainingMoves < 5){
-          if (Game.isWinner()){
+        if (state.current.remainingMoves < 5) {
+          if (Game.isWinner()) {
             return Game.won();
           }
         }
@@ -46,7 +46,7 @@ const Board = (() => {
           state.set('isGameOver', 0);
           UI.updateStatus('This match is a draw match');
         } else {
-          UI.updateStatus();
+          return UI.updateStatus();
         }
       }
     },
