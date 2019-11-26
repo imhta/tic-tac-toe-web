@@ -24,7 +24,6 @@ menuBtn.addEventListener('click', (e) => {
 startBtn.addEventListener('click', (e) => {
   const playerData = new FormData(mainForm);
   Game.updateInfo([...playerData.values()]);
-  UI.flipBoardOut(boardWrapperElement);
   route.from(homeWrapperElement).to(boardWrapperElement);
   e.preventDefault();
 });
