@@ -16,7 +16,6 @@ const boardElement = document.getElementById('board');
 const mainForm = document.getElementById('player-name-form');
 
 menuBtn.addEventListener('click', (e) => {
-  UI.flipBoardIn(homeWrapperElement);
   route.from(boardWrapperElement).to(homeWrapperElement);
   UI.initForm();
   e.preventDefault();
@@ -24,6 +23,7 @@ menuBtn.addEventListener('click', (e) => {
 startBtn.addEventListener('click', (e) => {
   const playerData = new FormData(mainForm);
   Game.updateInfo([...playerData.values()]);
+  UI.flipBoardOut(boardWrapperElement);
   route.from(homeWrapperElement).to(boardWrapperElement);
   e.preventDefault();
 });
