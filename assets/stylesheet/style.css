@@ -1,0 +1,153 @@
+body {
+  margin: 0px;
+  background-color: #132549;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+}
+
+img {
+  width: 150px;
+  height: 150px;
+}
+
+h1 {
+  color: white;
+}
+
+nav {
+  padding: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-end;
+}
+.scorecard {
+  background-color: #0e1c36;
+  user-select: none;
+}
+
+#player1,
+#player2 {
+  display: flex;
+  flex-direction: column;
+}
+
+.score {
+  display: flex;
+  justify-content: center;
+}
+
+.score h1 {
+  padding: 0px;
+  margin: 0px;
+  font-size: 5rem;
+}
+
+.pl-name {
+  display: flex;
+  flex-direction: row;
+}
+
+.pl-name h1 {
+  margin: 0px 10px;
+  padding: 0px 10px;
+  background-color: green;
+  border-radius: 10px;
+}
+
+.symbol {
+  border-radius: 50% !important;
+}
+#current-status {
+  background-color: #06dd28;
+  font-family: "Courier New", Courier, monospace;
+}
+
+#board-wrapper {
+  display: block;
+  width: fit-content;
+  margin: 10px auto;
+  box-shadow: 0px 0px 5px black;
+}
+#board,
+#player-name-form {
+  background-color: #132549;
+  color: white;
+  width: 350px;
+  height: 350px;
+  margin: 15px;
+  border-collapse: collapse;
+  border: hidden;
+  user-select: none;
+}
+
+#board td {
+  border: 3px solid#06DD28;
+  width: 100px;
+  height: 100px;
+  font-size: 48px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.menu-wrapper {
+  display: flex;
+  background-color: #0e1c36;
+  color: white;
+  text-align: center;
+  justify-content: space-around;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+#menu-btn,
+#reset-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px 0px;
+  flex: 1;
+}
+
+#reset-btn:hover,
+#menu-btn:hover {
+  padding-bottom: 23px;
+  border-bottom: 2px solid #06dd28;
+}
+#home-wrapper {
+  display: none;
+  width: fit-content;
+  margin: 10px auto;
+  box-shadow: 0px 0px 5px black;
+  padding: 20px;
+  background-color: #0e1c36;
+}
+#player-name-form {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  height: max-content;
+  background-color: #0e1c36;
+  justify-content: end;
+}
+#player-name-form a {
+  color: #06dd28;
+}
+#player-name-form input {
+  display: block;
+  margin: 20px;
+  padding: 15px 30px;
+  font-size: larger;
+  color: white;
+  background-color: #132549;
+  border: none;
+  border-bottom: 2px solid #06dd28;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+#player-name-form #start-btn {
+  border: none;
+  background-color: #06dd28;
+  cursor: pointer;
+}
