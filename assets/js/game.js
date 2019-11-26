@@ -1,3 +1,4 @@
+/* eslint-disable  no-restricted-syntax */
 import Player from './player.js';
 import Board from './board.js';
 import UI from './ui.js';
@@ -14,7 +15,7 @@ const Game = (() => {
   };
 
   const checkHorizontal = (board) => {
-    for(const row of board) {
+    for (const row of board) {
       const uniq = new Set(row);
       if (uniq.size === 1 && !uniq.has('')) {
         return true;
