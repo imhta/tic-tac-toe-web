@@ -28,6 +28,28 @@ const UI = (() => {
     updatebyId(id, innerHtml) {
       document.getElementById(id).innerHTML = innerHtml;
     },
+    flipBoardIn(element) {
+      element.animate([
+        // keyframes
+        { transform: 'rotateY(0deg)' }, 
+        { transform: 'rotateY(180deg)' }
+      ], { 
+        // timing options
+        duration: 1000,
+        iterations: 1
+      });
+    },
+    flipBoardOut(element){
+      element.animate([
+        // keyframes
+        { transform: 'rotateY(0deg)' }, 
+        { transform: 'rotateY(-180deg)' }
+      ], { 
+        // timing options
+        duration: 1000,
+        iterations: 1
+      });
+    }
   };
 })();
 
