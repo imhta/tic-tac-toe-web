@@ -46,7 +46,7 @@ const Board = (() => {
           state.set('isGameOver', 0);
           UI.updateStatus('This match is a draw match');
         } else {
-          return UI.updateStatus();
+          UI.updateStatus();
         }
       }
     },
