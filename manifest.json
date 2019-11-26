@@ -3,10 +3,26 @@
     "short_name": "Tic-Tac-Toe",
     "icons": [
       {
+        "src": "assets/images/tic tac toe logo.png",
+        "sizes": "80x84",
+        "type": "image/png"
+      },
+      {
+        "src": "assets/images/tic tac toe logo-2.png",
+        "sizes": "158x167",
+        "type": "image/png"
+      },
+      {
+        "src": "assets/images/tic tac toe logo-1.png",
+        "sizes": "120x126",
+        "type": "image/png"
+      },
+      {
         "src": "assets/images/tic tac toe logo@2x.png",
-        "sizes": "512x512",
+        "sizes": "316x334",
         "type": "image/png"
       }
+
     ],
     "start_url": "/index.html",
     "display": "standalone",
