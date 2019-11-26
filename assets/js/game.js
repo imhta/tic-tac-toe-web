@@ -14,12 +14,12 @@ const Game = (() => {
   };
 
   const checkHorizontal = (board) => {
-    board.forEach((row) => {
+    for(const row of board) {
       const uniq = new Set(row);
-      if (uniq.size === 1) {
+      if (uniq.size === 1 && !uniq.has('')) {
         return true;
       }
-    });
+    }
     return false;
   };
 
