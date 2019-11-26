@@ -5,19 +5,22 @@ import state from './state.js';
 
 const Game = (() => {
   const checkVertical = (board) => {
-     for(let i=0; i<board.length; i++){
-        const currentVertical = (board[i][i] === board[i+1][i]) && (board[i+1][i] === board[i+2][i]);
-        if(currentVertical)
-          return true;
-     }
+    for (let i = 0; i < board.length; i++) {
+      const currentVertical = (board[0][i] === board[1][i] 
+      && board[1][i] === board[2][i]);
+      if (currentVertical) return true;
+    }
     return false;
   };
 
   const checkHorizontal = (board) => {
     board.forEach((row) => {
-      let rowSet = new Set(row);
-      return rowSet.size === 1;
+      const uniq = new Set(row);
+      if (uniq.size === 1) {
+        return true;
+      }
     });
+    return false;
   };
 
   const checkDiagonal = (board) => {
@@ -38,9 +41,33 @@ const Game = (() => {
       Board.reset();
     },
     isWinner() {
-      const {board} = state.current;
-      if(checkVertical(board) || checkHorizontal(board) || checkDiagonal(board)) return true;
+      const { board } = state.current;
+      if (
+        checkVertical(board) ||
+        checkHorizontal(board) ||
+        checkDiagonal(board)
+      ){
+        return true;
+      }
       return false;
+    },
+    won() {
+      const { player, player1, player2 } = state.current;
+      if (player.name === player1.name) {
+        player1.score += 1;
+        state.set('player1', player1);
+      } else {
+        player2.score += 1;
+        state.set('player2', player2);
+      }
+      state.set('isGameOver', 1);
+      UI.init();
+      UI.updateStatus(`${player.name} won the match`);
+    },
+    draw() {
+      state.set('isGameOver', 0);
+      UI.init();
+      Board.reset();
     },
   };
 })();

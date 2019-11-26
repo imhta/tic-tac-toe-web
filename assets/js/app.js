@@ -30,7 +30,11 @@ startBtn.addEventListener('click', (e) => {
 });
 
 boardElement.addEventListener('click', (e) => {
-  Board.set(e.target);
+  const { isGameOver } = state.current;
+  console.log(isGameOver)
+  if (isGameOver === -1) Board.set(e.target);
+  else if (isGameOver === 0) Game.draw();
+  else if (isGameOver === 1) Board.reset();
   e.preventDefault();
 });
 

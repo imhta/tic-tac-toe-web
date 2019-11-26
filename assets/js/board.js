@@ -1,6 +1,7 @@
 import state from './state.js';
 import UI from './ui.js';
 import Player from './player.js';
+import Game from './game.js';
 
 const Board = (() => {
   return {
@@ -12,6 +13,8 @@ const Board = (() => {
           ['', '', ''],
           ['', '', ''],
         ]);
+        state.set('remainingMoves', 9);
+        state.set('isGameOver', -1);
       } else {
         let rowIndex = 1;
         board.forEach((row) => {
@@ -31,9 +34,20 @@ const Board = (() => {
       if (this.isFree(row - 1, col - 1)) {
         state.current.board[row - 1][col - 1] = state.current.player.role;
         state.set('board', state.current.board);
+        state.set('remainingMoves', state.current.remainingMoves -= 1)
         UI.updateCell(row, col);
+        if (state.current.remainingMoves < 5){
+          if (Game.isWinner()){
+            return Game.won();
+          }
+        }
         Player.change();
-        UI.updateStatus();
+        if (state.current.remainingMoves === 0 && state.current.isGameOver === -1) {
+          state.set('isGameOver', 0);
+          UI.updateStatus('This match is a draw match');
+        } else {
+          UI.updateStatus();
+        }
       }
     },
 
@@ -46,6 +60,8 @@ const Board = (() => {
         ['', '', ''],
         ['', '', ''],
       ]);
+      state.set('remainingMoves', 9);
+      state.set('isGameOver', -1);
       this.init();
       Player.changeRole();
       UI.updateStatus();

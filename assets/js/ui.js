@@ -16,11 +16,10 @@ const UI = (() => {
       player1Field.value = state.current.player1.name;
       player2Field.value = state.current.player2.name;
     },
-    updateStatus() {
-      this.updatebyId(
-        'current-status',
-        `${state.current.player.name} place your ${state.current.player.role}`,
-      );
+    updateStatus(
+      status = `${state.current.player.name} place your ${state.current.player.role}`
+    ) {
+      this.updatebyId('current-status', status);
     },
     updateCell(row, col) {
       this.updatebyId(`${row}-${col}`, state.current.board[row - 1][col - 1]);
@@ -29,26 +28,32 @@ const UI = (() => {
       document.getElementById(id).innerHTML = innerHtml;
     },
     flipBoardIn(element) {
-      element.animate([
-        // keyframes
-        { transform: 'rotateY(0deg)' }, 
-        { transform: 'rotateY(180deg)' }
-      ], { 
-        // timing options
-        duration: 1000,
-        iterations: 1
-      });
+      element.animate(
+        [
+          // keyframes
+          { transform: 'rotateY(0deg)' },
+          { transform: 'rotateY(180deg)' }
+        ],
+        {
+          // timing options
+          duration: 1000,
+          iterations: 1
+        }
+      );
     },
-    flipBoardOut(element){
-      element.animate([
-        // keyframes
-        { transform: 'rotateY(0deg)' }, 
-        { transform: 'rotateY(-180deg)' }
-      ], { 
-        // timing options
-        duration: 1000,
-        iterations: 1
-      });
+    flipBoardOut(element) {
+      element.animate(
+        [
+          // keyframes
+          { transform: 'rotateY(0deg)' },
+          { transform: 'rotateY(-180deg)' }
+        ],
+        {
+          // timing options
+          duration: 1000,
+          iterations: 1
+        }
+      );
     }
   };
 })();
