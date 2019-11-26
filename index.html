@@ -9,7 +9,7 @@
       href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
       rel="stylesheet"
     />
-    <link rel="manifest" href="manifest.json">
+    <link rel="manifest" href="manifest.json" />
     <title>Tic Tac Toe Web 🎮</title>
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
@@ -20,82 +20,86 @@
     <nav class="nav">
       <img src="assets/images/tic tac toe logo@2x.png" />
     </nav>
-    <section id="board-wrapper">
-      <nav class="scorecard">
-        <div id="player1">
-          <div class="pl-name">
-            <h1 id="player1-name">Player 1</h1>
+    <main>
+      <section id="flip-board">
+        <section id="board-wrapper">
+          <nav class="scorecard">
+            <div id="player1">
+              <div class="pl-name">
+                <h1 id="player1-name">Player 1</h1>
+              </div>
+              <div class="score"><h1 id="score-1">0</h1></div>
+            </div>
+            <div id="player2">
+              <div class="pl-name">
+                <h1 id="player2-name">Player 2</h1>
+              </div>
+              <div class="score"><h1 id="score-2">0</h1></div>
+            </div>
+          </nav>
+          <div id="current-status">Player 1 place your X</div>
+          <table id="board">
+            <tbody>
+              <tr id="row-1">
+                <td id="1-1"></td>
+                <td id="1-2"></td>
+                <td id="1-3"></td>
+              </tr>
+              <tr id="row-2">
+                <td id="2-1"></td>
+                <td id="2-2"></td>
+                <td id="2-3"></td>
+              </tr>
+              <tr id="row-3">
+                <td id="3-1"></td>
+                <td id="3-2"></td>
+                <td id="3-3"></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="menu-wrapper">
+            <div id="reset-btn">
+              <i class="material-icons">
+                replay
+              </i>
+              Reset
+            </div>
+            <div id="menu-btn">Main menu</div>
           </div>
-          <div class="score"><h1 id="score-1">0</h1></div>
-        </div>
-        <div id="player2">
-          <div class="pl-name">
-            <h1 id="player2-name">Player 2</h1>
-          </div>
-          <div class="score"><h1 id="score-2">0</h1></div>
-        </div>
-      </nav>
-      <div id="current-status">Player 1 place your X</div>
-      <table id="board">
-        <tbody>
-          <tr id="row-1">
-            <td id="1-1"></td>
-            <td id="1-2"></td>
-            <td id="1-3"></td>
-          </tr>
-          <tr id="row-2">
-            <td id="2-1"></td>
-            <td id="2-2"></td>
-            <td id="2-3"></td>
-          </tr>
-          <tr id="row-3">
-            <td id="3-1"></td>
-            <td id="3-2"></td>
-            <td id="3-3"></td>
-          </tr>
-        </tbody>
-      </table>
-      <div class="menu-wrapper">
-        <div id="reset-btn">
-          <i class="material-icons">
-            replay
-          </i>
-          Reset
-        </div>
-        <div id="menu-btn">Main menu</div>
-      </div>
-    </section>
-    <section id="home-wrapper">
-      <header>
-        <h1>Main menu</h1>
-      </header>
-      <form id="player-name-form">
-        <input
-          id="player1-name-input"
-          name="player1-name"
-          value="Player 1"
-          placeholder="Player 1 name"
-        />
-        <input
-          id="player2-name-input"
-          name="player2-name"
-          value="Player 2"
-          placeholder="Player 2 name"
-        />
-        <div id="check-rules">
-          Check <a href="https://en.wikipedia.org/wiki/Tic-tac-toe">rules</a>
-        </div>
-        <input type="submit" value="Start the game" id="start-btn" />
-      </form>
-    </section>
+        </section>
+        <section id="home-wrapper">
+          <header>
+            <h1>Main menu</h1>
+          </header>
+          <form id="player-name-form">
+            <input
+              id="player1-name-input"
+              name="player1-name"
+              value="Player 1"
+              placeholder="Player 1 name"
+            />
+            <input
+              id="player2-name-input"
+              name="player2-name"
+              value="Player 2"
+              placeholder="Player 2 name"
+            />
+            <div id="check-rules">
+              Check
+              <a href="https://en.wikipedia.org/wiki/Tic-tac-toe">rules</a>
+            </div>
+            <input type="submit" value="Start the game" id="start-btn" />
+          </form>
+        </section>
+      </section>
+    </main>
     <script type="module" src="./assets/js/app.js"></script>
     <script>
-        if('serviceWorker' in navigator) {
-          navigator.serviceWorker.register('/sw.js')
-            .then(function() {
-                  console.log('Service Worker Registered');
-            });
-        }
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("/sw.js").then(function() {
+          console.log("Service Worker Registered");
+        });
+      }
     </script>
   </body>
 </html>
